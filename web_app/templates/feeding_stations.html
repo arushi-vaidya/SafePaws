@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Feeding Stations{% endblock %}
+{% block content %}
+<h2>Nearby Pet Feeding Stations</h2>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([12.9716, 77.5946], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+</script>
+{% endblock %}
