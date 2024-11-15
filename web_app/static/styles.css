@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.logo{
+.logo {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 header {
@@ -14,46 +14,277 @@ header {
     padding-bottom: 1%;
 }
 nav a {
-    color: #fff;                /* White text */
-    padding: 10px;              /* Add padding inside the box */
-    text-decoration: none;      /* Remove underline */
-    background-color: #333333;  /* Charcoal background */
-    border-radius: 5px;         /* Rounded corners for a softer look */
-    margin: 5px;                /* Space between links */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #333333;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-    background-color: #555555;  /* Lighter charcoal on hover */
-    transform: scale(1.05);      /* Slightly enlarge the link on hover */
-}
+    background-color: #555555;
+    transform: scale(1.05);
+} 
 
-/* Set the full viewport height for the home section */
 .home-background {
-    background-image: url('dog-mage.jpg'); /* Replace 'dog-image.jpg' with your image path */
-    background-size: cover; /* Make sure the background image covers the entire section */
-    background-position: center; /* Center the image */
-    background-attachment: fixed; /* Make the background image fixed when scrolling */
-    height: 100vh; /* Full viewport height */
+    background-image: url('dog-mage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Text color */
-    text-align: center; /* Center the text */
+    color: white;
+    text-align: center;
     position: relative;
 }
 .content {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text visibility */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 10px; /* Optional: rounded corners for the text box */
+    border-radius: 10px;
 }
-.content{
+.content {
     font-size: 200%;
 }
-footer{
-    background: #EED9C4;
+footer {
+    background: white;
     color: #333333;
     padding: 10px 0;
     text-align: center;
     padding-bottom: 1%;
+}
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.oval-box:hover {
+    background-color: #f4cfac;
+    transform: scale(1.05);
+}
+
+.oval-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    background-color: #EED9C4;
+    color: black;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+    text-align: left;
+    margin: 1px;
+}
+
+.blog-content {
+    flex: 1;
+    margin: 1px;
+}
+
+.blog-content a {
+    font-size: 1.3em;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-content p {
+    margin: 10px 0 0 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.blog-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .oval-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .blog-img {
+        order: 0 !important;
+        margin-bottom: 10px;
+    }
+}
+
+.blog-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.blog-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: justify;
+    color: #34495e;
+}
+
+.blog-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.blog-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #16a085;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #2d3436;
+}
+
+ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.bi {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #3498db;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-intro {
+    font-size: 1.2rem;
+    color: #34495e;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.blog-section-new {
+    margin-bottom: 50px;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section-heading {
+    font-size: 2rem;
+    color: #16a085;
+    margin-bottom: 15px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-wrapper.reverse {
+    flex-direction: row-reverse;
+}
+
+.blog-img-new {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.text-content {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #2d3436;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.text-content li {
+    margin-bottom: 10px;
+}
+
+.back-link-new {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2980b9;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link-new:hover {
+    background-color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .blog-img-new {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
 }
