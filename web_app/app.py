@@ -32,5 +32,23 @@ def upload_picture():
             return redirect(url_for('home'))
     return render_template('upload_picture.html')
 
+@app.route('/blog/<blog_id>')
+@app.route('/blog1')
+def blog1():
+    return render_template('blog1.html')
+
+@app.route('/blog2')
+def blog2():
+    return render_template('blog2.html')
+
+@app.route('/blog3')
+def blog3():
+    return render_template('blog3.html')
+
+@app.route('/blog4')
+def blog4():
+    return render_template('blog4.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
