@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Animal Transport{% endblock %}
+{% block content %}
+<h2 class="blog-title">Animal Transport</h2>
+<p class="blog-intro">
+    Transporting animals can be stressful, but with the right preparation, you can ensure a safe and comfortable journey for them. Whether traveling short distances or embarking on long trips, the tips below can help.
+</p>
+
+<div class="blog-section-new">
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h3 class="section-heading">1. Choose the Right Carrier</h3>
+            <p>
+                Selecting an appropriate carrier is essential for safe and comfortable animal transport. The carrier should:
+            </p>
+            <ul>
+                <li>Be spacious enough for the animal to stand, turn, and lie down comfortably.</li>
+                <li>Have good ventilation to ensure a steady flow of fresh air.</li>
+                <li>Be secure to prevent accidental escapes during transport.</li>
+            </ul>
+            <p>
+                Soft-sided carriers are ideal for small pets, while sturdy, hard-sided carriers work well for larger animals.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='3.jpeg') }}" alt="Animal Carrier" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<div class="blog-section-new">
+    <div class="content-wrapper reverse">
+        <div class="text-content">
+            <h3 class="section-heading">2. Keep Them Calm</h3>
+            <p>
+                Travel can be overwhelming for animals. To keep them calm:
+            </p>
+            <ul>
+                <li>Place familiar items like toys, blankets, or bedding inside the carrier.</li>
+                <li>Use calming sprays or diffusers designed for pets.</li>
+                <li>Avoid loud noises and sudden movements during the journey.</li>
+            </ul>
+            <p>
+                Spending time acclimating your pet to the carrier before travel can also help reduce stress.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='4.jpeg') }}" alt="Keeping Animals Calm" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<div class="blog-section-new">
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h3 class="section-heading">3. Ensure Safety and Comfort</h3>
+            <p>
+                Safety and comfort should always be top priorities during transport:
+            </p>
+            <ul>
+                <li>Avoid overpacking the carrier with unnecessary items.</li>
+                <li>Secure the carrier in your vehicle to prevent tipping or sliding.</li>
+                <li>For long trips, plan regular breaks for hydration, feeding, and bathroom needs.</li>
+            </ul>
+            <p>
+                Keep the vehicle temperature comfortable and never leave animals unattended in a parked car.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='2.jpeg') }}" alt="Ensuring Safety and Comfort" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<a href="{{ url_for('pet_blogs') }}" class="back-link-new">Back to Pet Blogs</a>
+{% endblock %}

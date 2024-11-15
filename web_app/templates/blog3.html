@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Safe Animal Crossing{% endblock %}
+{% block content %}
+<h2 class="blog-title">Safe Animal Crossing</h2>
+<p class="blog-intro">
+    Road safety is essential for protecting animals from accidents. By implementing the right measures, we can create safer environments for both humans and animals. Below are some effective strategies for achieving this.
+</p>
+
+<div class="blog-section-new">
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h3 class="section-heading">1. Use Reflective Gear</h3>
+            <p>
+                Equip animals, especially pets and stray animals, with reflective collars or gear to make them visible to drivers at night. Reflective materials glow when headlights shine on them, significantly reducing the likelihood of accidents.
+            </p>
+            <ul>
+                <li>Available in various sizes for different animals.</li>
+                <li>Cost-effective and easy to implement.</li>
+                <li>Great for both urban and rural areas.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='4.jpeg') }}" alt="Reflective Gear for Animals" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<div class="blog-section-new">
+    <div class="content-wrapper reverse">
+        <div class="text-content">
+            <h3 class="section-heading">2. Create Wildlife Corridors</h3>
+            <p>
+                Wildlife corridors are designated pathways that allow animals to cross busy roads safely. These corridors can include underpasses, overpasses, or fenced crossings specifically designed to guide animals. 
+            </p>
+            <ul>
+                <li>Prevents animals from wandering onto roads.</li>
+                <li>Protects endangered species by reducing collisions.</li>
+                <li>Encourages biodiversity in urban planning.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='2.jpeg') }}" alt="Wildlife Corridors" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<div class="blog-section-new">
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h3 class="section-heading">3. Raise Awareness</h3>
+            <p>
+                Community education plays a vital role in protecting animals. Awareness campaigns can teach drivers the importance of staying alert, especially in areas with frequent wildlife activity. Encourage reporting of animal sightings to prevent accidents.
+            </p>
+            <ul>
+                <li>Distribute flyers or posters in neighborhoods.</li>
+                <li>Collaborate with schools and local organizations.</li>
+                <li>Install road signs warning of animal crossings.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='1.jpeg') }}" alt="Raising Awareness for Road Safety" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<div class="blog-section-new">
+    <div class="content-wrapper reverse">
+        <div class="text-content">
+            <h3 class="section-heading">4. Install Motion-Activated Warning Systems</h3>
+            <p>
+                Motion-activated warning systems can detect animal movement near roads and alert drivers using flashing lights or sounds. These systems are particularly effective in high-risk areas like highways and rural roads.
+            </p>
+            <ul>
+                <li>Real-time detection of animals.</li>
+                <li>Increases driver reaction time.</li>
+                <li>Reduces nighttime accidents.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='3.jpeg') }}" alt="Motion-Activated Warning Systems" class="blog-img-new">
+        </div>
+    </div>
+</div>
+
+<a href="{{ url_for('pet_blogs') }}" class="back-link-new">Back to Pet Blogs</a>
+{% endblock %}
