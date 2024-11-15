@@ -2,5 +2,64 @@
 {% block title %}Pet Blogs{% endblock %}
 {% block content %}
 <h2>Pet Care Tips and Blogs</h2>
-<!-- Content for blogs goes here -->
+<div class="blog-list">
+    <div class="oval-box">
+        <img src="{{ url_for('static', filename='1.jpeg') }}" alt="Care" class="blog-img left">
+        <div class="blog-content">
+            <a href="{{ url_for('blog1') }}">How to take care of animals?</a>
+            <p>
+                Taking care of animals involves much more than food and shelter. This blog provides a step-by-step guide 
+                to becoming a responsible caregiver. Learn how to create a nurturing environment tailored to your pet’s 
+                species and breed, ensure mental stimulation through interactive play, and address common behavioral 
+                issues with positive reinforcement techniques. The blog also highlights the importance of regular health 
+                checkups, vaccinations, and grooming routines. Whether you’re a first-time pet owner or experienced caretaker, 
+                gain deeper insights into what your furry, feathered, or scaly friend truly needs to thrive.
+            </p>
+        </div>
+    </div>
+    <div class="oval-box">
+        <img src="{{ url_for('static', filename='2.jpeg') }}" alt="Food" class="blog-img right">
+        <div class="blog-content">
+            <a href="{{ url_for('blog2') }}">Animal food needs</a>
+            <p>
+                Animals have diverse dietary requirements based on their age, breed, and health conditions. This blog delves 
+                into the specifics of nutrition, explaining the role of proteins, fats, carbohydrates, vitamins, and minerals 
+                in their diet. It also offers tips on feeding schedules, portion control, and dietary restrictions for pets with 
+                specific health concerns. For pet parents interested in homemade food, find recipes vetted by veterinarians 
+                to ensure balanced nutrition. Additionally, learn how to recognize signs of nutritional deficiencies and 
+                how seasonal variations can impact dietary needs.
+            </p>
+        </div>
+    </div>
+    <div class="oval-box">
+        <img src="{{ url_for('static', filename='3.jpeg') }}" alt="Crossing" class="blog-img left">
+        <div class="blog-content">
+            <a href="{{ url_for('blog3') }}">Safe animal crossing</a>
+            <p>
+                Ensuring safe animal crossings on busy roads is crucial for their protection and public safety. This blog examines 
+                real-world examples of wildlife corridors, underpasses, and overpasses designed for animals. Discover how these 
+                measures have successfully reduced accidents in various parts of the world. Learn how reflective gear for pets, 
+                animal-warning road signs, and community awareness campaigns can make a difference. The blog also explores the 
+                potential of AI and IoT technologies in preventing accidents, such as motion-activated alerts and autonomous 
+                detection systems.
+            </p>
+        </div>
+    </div>
+    <div class="oval-box">
+        <img src="{{ url_for('static', filename='4.jpeg') }}" alt="Transport" class="blog-img right">
+        <div class="blog-content">
+            <a href="{{ url_for('blog4') }}">Animal transport</a>
+            <p>
+                Transporting animals requires a balance of safety, comfort, and legal compliance. This blog covers everything 
+                you need to know, from selecting the right carrier size to ensuring proper ventilation and temperature control. 
+                It also addresses stress-reduction techniques, such as using calming sprays or familiar toys during travel. For 
+                long-distance journeys, explore tips on managing hydration, potty breaks, and feeding schedules. Additionally, 
+                learn about the legal regulations for transporting pets domestically and internationally, including documentation 
+                and quarantine requirements. Whether you’re moving across town or across the globe, this blog equips you with 
+                all the knowledge to make the journey as smooth as possible for your beloved animals.
+            </p>
+        </div>
+    </div>
+</div>
 {% endblock %}
+s
