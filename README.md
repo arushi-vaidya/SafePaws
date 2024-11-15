@@ -12,6 +12,8 @@ An IoT and AI-powered project to detect animals on roads and provide food and wa
 Run animal_detection/detect_animal.py for animal detection.
 Run pet_feeding_station/pet_feeding.py for the feeding station.
 Start the web app:
-cd web_app
-python app.py
+```bash
+   cd web_app
+   python app.py
 Visit the web app at http://localhost:5000.# SafePaws
+
