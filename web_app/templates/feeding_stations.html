@@ -1,13 +1,63 @@
 {% extends "base.html" %}
-{% block title %}Safe spots and stations{% endblock %}
+{% block title %}Feeding Stations{% endblock %}
 {% block content %}
-<h2>Safe Spots Stations</h2>
-<div id="map"></div>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<h2>Nearby Pet Feeding Stations</h2>
+<div id="map" style="width: 100%; height: 500px;"></div>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" />
+
+<!-- Leaflet JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+
 <script>
-    var map = L.map('map').setView([12.9716, 77.5946], 13);
+    var map = L.map('map').setView([12.9716, 77.5946], 13); // Coordinates for Bangalore, change as per your requirement
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
     }).addTo(map);
+
+    // Random feeding stations with details
+    var feedingStations = [
+        {lat: 12.9716, lon: 77.5946, label: "Feeding Station 1", description: "Feeding station providing food and water for stray animals.", contact: "9876543210"},
+        {lat: 12.9657, lon: 77.6101, label: "Feeding Station 2", description: "Located near the park, serving as a feeding spot.", contact: "9988776655"},
+        {lat: 12.9575, lon: 77.6038, label: "Feeding Station 3", description: "A community-run station for feeding stray pets.", contact: "9777554433"},
+        {lat: 12.9790, lon: 77.5845, label: "Feeding Station 4", description: "Located near the busy intersection, provides food for strays.", contact: "9123456789"},
+    ];
+
+    // Random road detector locations with details
+    var roadDetectors = [
+        {lat: 12.9675, lon: 77.6095, label: "Road Detector 1", description: "Detects animal presence on the road using sensors.", contact: "8899001122"},
+        {lat: 12.9561, lon: 77.6021, label: "Road Detector 2", description: "Equipped with cameras to identify animals crossing roads.", contact: "7788992233"},
+        {lat: 12.9845, lon: 77.5809, label: "Road Detector 3", description: "High-tech detectors installed to warn vehicles of animal presence.", contact: "6677883344"},
+        {lat: 12.9712, lon: 77.5907, label: "Road Detector 4", description: "Roadside detectors to monitor animal movements and avoid accidents.", contact: "5566774455"},
+    ];
+
+    // Function to create markers with hover details
+    function createMarker(location, type) {
+        var marker = L.marker([location.lat, location.lon]).addTo(map);
+
+        var details = '<b>' + location.label + '</b><br>' +
+                      '<b>Description:</b> ' + location.description + '<br>' +
+                      '<b>Contact:</b> ' + location.contact;
+
+        marker.on('mouseover', function () {
+            marker.bindPopup(details).openPopup();
+        });
+
+        marker.on('mouseout', function () {
+            marker.closePopup();
+        });
+    }
+
+    // Add Feeding Stations Markers with Hover Details
+    feedingStations.forEach(function(station) {
+        createMarker(station, "feeding");
+    });
+
+    // Add Road Detector Markers with Hover Details
+    roadDetectors.forEach(function(detector) {
+        createMarker(detector, "road_detector");
+    });
 </script>
+
 {% endblock %}
