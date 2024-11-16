@@ -50,6 +50,7 @@ nav a:hover {
     font-size: 200%;
 }
 footer {
+
     background: white;
     color: #333333;
     padding: 10px 0;
@@ -374,6 +375,90 @@ ul {
     color: #333;
     width: 60%;
     text-align: left;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h2.gallery-title {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.search-form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-label {
+    font-size: 16px;
+    color: #333;
+}
+
+.search-input {
+    padding: 8px;
+    margin: 10px;
+    width: 250px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    background-color: #EED9C4;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #EED9C4;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.no-images {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    margin-top: 30px;
 }
 
 
