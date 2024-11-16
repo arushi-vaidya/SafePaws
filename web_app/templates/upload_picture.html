@@ -7,6 +7,22 @@
     <p style="color: green;">{{ message }}</p>
 {% endif %}
 
+<!-- How it works section -->
+<h3>How It Works</h3>
+<p>
+    By uploading a picture of a stray animal, you help us track and manage the safety of animals on the streets. 
+    Here's how it works:
+</p>
+<ol>
+    <li><strong>Enter the Location:</strong> Provide the location where the stray animal was spotted. This helps in mapping the animals' positions for better monitoring.</li>
+    <li><strong>Select a Picture:</strong> Choose a clear picture of the animal. This image will be stored in our database for further analysis and tracking.</li>
+    <li><strong>Upload:</strong> Once you submit the form, the picture will be uploaded, and the location information will be saved for future reference and action.</li>
+</ol>
+<p>
+    Your contribution plays a vital role in helping prevent road accidents and ensuring the safety of stray animals. Thank you for your support!
+</p>
+
+<!-- Upload form -->
 <form action="{{ url_for('upload_picture') }}" method="POST" enctype="multipart/form-data">
     <label for="location">Enter Location:</label>
     <input type="text" id="location" name="location" required>
@@ -16,5 +32,5 @@
     <br><br>
     <button type="submit">Upload</button>
 </form>
-{% endblock %}
 
+{% endblock %}
