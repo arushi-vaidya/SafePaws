@@ -7,7 +7,8 @@ app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, 'static', 'uploads')
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # JSON file to store image metadata
-METADATA_FILE = 'uploads_metadata.json'
+METADATA_FILE = os.path.join(app.root_path, 'templates', 'uploads_metadata.json')
+
 
 # Helper function to read the metadata from the JSON file
 def load_metadata():
