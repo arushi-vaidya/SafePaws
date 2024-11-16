@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Gallery{% endblock %}
+{% block content %}
+<h2 class="gallery-title">Uploaded Pictures</h2>
+
+<form action="{{ url_for('gallery') }}" method="POST" class="search-form">
+    <label for="location" class="search-label">Search by Location:</label>
+    <input type="text" id="location" name="location" class="search-input" value="{{ location_filter or '' }}">
+    <button type="submit" class="search-button">Search</button>
+</form>
+
+<div class="gallery-container">
+    {% for item in uploads %}
+        <div class="gallery-item">
+            <p><strong>Location:</strong> {{ item.location }}</p>
+            <img src="{{ url_for('static', filename='uploads/' + item.filename) }}" alt="{{ item.filename }}" class="gallery-image">
+        </div>
+    {% endfor %}
+</div>
+
+{% if not uploads %}
+    <p class="no-images">No pictures found.</p>
+{% endif %}
+{% endblock %}
