@@ -1,8 +1,8 @@
 import time
 
 # Simulated PIR sensor and dispenser actions
-PIR_SENSOR_PIN = 17  # You can keep this as a placeholder for the pin
-DISPENSER_PIN = 27   # Same here for the dispenser pin
+PIR_SENSOR_PIN = 17 
+DISPENSER_PIN = 27   
 
 # Simulate the PIR sensor being triggered (use `True` to simulate detection)
 sensor_triggered = False
