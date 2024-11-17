@@ -1,10 +1,13 @@
 import cv2
-import tensorflow as tf
+import numpy as np
 import RPi.GPIO as GPIO
 import time
+import joblib
+from skimage.feature import hog
+from skimage import exposure
 
-# Load pre-trained model
-model = tf.keras.models.load_model('animal_detection_model.h5')
+# Load the trained Random Forest model
+rf_model = joblib.load('random_forest_animal_classifier.pkl')
 
 # Setup GPIO for deterrents
 LED_PIN = 18
@@ -20,10 +23,18 @@ def activate_deterrents():
     GPIO.output(LED_PIN, GPIO.LOW)
     GPIO.output(BUZZER_PIN, GPIO.LOW)
 
+# Define function to extract HOG features from an image
+def extract_hog_features(image):
+    fd, hog_image = hog(image, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2), visualize=True, channel_axis=-1)
+    hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
+    return fd
+
+# Function to detect animal using the Random Forest model
 def detect_animal(frame):
-    resized_frame = cv2.resize(frame, (224, 224)) / 255.0
-    prediction = model.predict(tf.expand_dims(resized_frame, axis=0))
-    return prediction[0][0] > 0.5  # True if an animal is detected
+    resized_frame = cv2.resize(frame, (224, 224))  # Resize to match model's input size
+    hog_features = extract_hog_features(resized_frame)  # Extract HOG features
+    prediction = rf_model.predict([hog_features])  # Predict using the Random Forest model
+    return prediction[0] == 1  # Returns True if an animal is detected (assuming '1' means animal detected)
 
 cap = cv2.VideoCapture(0)
 
