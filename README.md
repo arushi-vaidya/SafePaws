@@ -14,7 +14,7 @@ The next initiative would be to develop a website. This website would allow peop
    pip install -r tensorflow flask
 ## Running the Project
 1. Run animal_detection/detect_animal.py for animal detection.
-2. Run pet_feeding_station/pet_feeding.py for the feeding station.
+2. Run pet_feeding_station/pet_feeding.py for the feeding station. If rasberry pie not available, run pet_feeding_station/pet_feeding_simulator.py
 3. Start the web app:
 ```bash
    cd web_app
