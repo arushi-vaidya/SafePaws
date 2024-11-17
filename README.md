@@ -11,7 +11,7 @@ The next initiative would be to develop a website. This website would allow peop
 1. Clone this repository.
 2. Install dependencies:
    ```bash
-   pip install -r tensorflow flask
+   python -m pip install scikit-image scikit-learn opencv-python flask
 ## Running the Project
 1. Run animal_detection/detect_animal.py for animal detection.
 2. Run pet_feeding_station/pet_feeding.py for the feeding station. If rasberry pie not available, run pet_feeding_station/pet_feeding_simulator.py
