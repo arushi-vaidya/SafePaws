@@ -19,5 +19,3 @@ The next initiative would be to develop a website. This website would allow peop
 ```bash
    cd web_app
    python app.py
-Visit the web app at http://localhost:5000.# SafePaws
-
