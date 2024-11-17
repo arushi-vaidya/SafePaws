@@ -8,7 +8,7 @@ The project demonstrates the potential of technology in addressing complex socie
 1. Clone this repository.
 2. Install dependencies:
    ```bash
-   python -m pip install scikit-image scikit-learn opencv-python flask
+   python -m pip install scikit-image scikit-learn opencv-python flask RPi.GPIO
 ## Running the Project
 1. Run animal_detection/detect_animal.py for animal detection.
 2. Run pet_feeding_station/pet_feeding.py for the feeding station. If rasberry pie not available, run pet_feeding_station/pet_feeding_simulator.py
