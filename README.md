@@ -13,9 +13,9 @@ The next initiative would be to develop a website. This website would allow peop
    ```bash
    pip install -r tensorflow flask
 ## Running the Project
-Run animal_detection/detect_animal.py for animal detection.
-Run pet_feeding_station/pet_feeding.py for the feeding station.
-Start the web app:
+1. Run animal_detection/detect_animal.py for animal detection.
+2. Run pet_feeding_station/pet_feeding.py for the feeding station.
+3. Start the web app:
 ```bash
    cd web_app
    python app.py
