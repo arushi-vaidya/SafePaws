@@ -2,6 +2,8 @@
 
 This project automates an animal feeding station using a Raspberry Pi, a PIR (Passive Infrared) sensor for motion detection, and a dispenser mechanism. When the PIR sensor detects movement, the dispenser is activated for 5 seconds to release food or water for animals.
 
+Here, another file called simulator has been uploaded where you can manually enter values to see the working on system.
+
 ## Features
 - Detects animal presence using a PIR motion sensor.
 - Activates a dispenser for a specified duration (default: 5 seconds).
@@ -9,16 +11,17 @@ This project automates an animal feeding station using a Raspberry Pi, a PIR (Pa
 - Gracefully handles program interruptions and cleans up GPIO settings.
 
 ## Prerequisites
-- **Hardware Components**:
-  - Raspberry Pi (any compatible model)
-  - PIR Sensor
-  - Dispenser mechanism (can be simulated using an LED or motor)
-  - Jumper wires and breadboard for connections
-  - Power source for the Raspberry Pi
-  
-- **Software**:
-  - Raspbian OS or any Raspberry Pi-compatible Linux distribution.
-  - Python 3 installed on the Raspberry Pi.
+### Hardware Components
+- Raspberry Pi (any compatible model)
+- PIR Sensor
+- Dispenser mechanism (can be simulated using an LED or motor)
+- Jumper wires and breadboard for connections
+- Power source for the Raspberry Pi
+
+
+### Software
+- Raspbian OS or any Raspberry Pi-compatible Linux distribution.
+- Python 3 installed on the Raspberry Pi.
 
 ## Circuit Diagram
 1. **PIR Sensor**:
@@ -37,16 +40,4 @@ This project automates an animal feeding station using a Raspberry Pi, a PIR (Pa
    ```bash
    sudo apt update
    sudo apt install python3-rpi.gpio
-   ```
-3. Place the components as per the circuit diagram.
-
-## Usage
-1. Run the Python script:
-   ```bash
-   python3 feeder.py
-   ```
-2. The script will monitor the PIR sensor for motion.
-3. When motion is detected, the dispenser will activate for 5 seconds.
-4. Stop the script using `Ctrl+C`. The GPIO settings will reset automatically.
-
-
+python3 pet_feeding_station
