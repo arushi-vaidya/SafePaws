@@ -40,4 +40,4 @@ Here, another file called simulator has been uploaded where you can manually ent
    ```bash
    sudo apt update
    sudo apt install python3-rpi.gpio
-python3 pet_feeding_station
+   python3 pet_feeding_station
