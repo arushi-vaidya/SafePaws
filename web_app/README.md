@@ -41,5 +41,8 @@ SafePaws is an innovative web platform designed to enhance road safety by integr
    git clone https://github.com/your-username/SafePaws.git
     cd web_app
     python3 -m venv venv
-    source venv/bin/activate 
+    source venv/bin/activate
+   pip install flask
+   python3 app.py
+
 
