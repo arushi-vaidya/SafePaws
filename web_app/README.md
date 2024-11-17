@@ -33,7 +33,7 @@ SafePaws is an innovative web platform designed to enhance road safety by integr
 3. Required Python packages:
    - TensorFlow
    - OpenCV
-   - SQLAlchemy (or any database library)
+   - Json
 
 ### Steps
 1. Clone this repository:
