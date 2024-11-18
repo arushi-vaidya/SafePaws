@@ -31,3 +31,8 @@ You can install the necessary dependencies using the following:
 
 ```bash
 python -m pip install opencv-python numpy scikit-learn scikit-image joblib RPi.GPIO
+sudo apt-get update
+sudo apt-get install -y python3-smbus python3-dev i2c-tools
+pip install RPLCD
+sudo raspi-config
+
