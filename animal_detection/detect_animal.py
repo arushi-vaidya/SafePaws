@@ -5,6 +5,7 @@ import time
 import joblib
 from skimage.feature import hog
 from skimage import exposure
+from RPLCD.i2c import CharLCD  # Import LCD library
 
 # Load the trained Random Forest model
 rf_model = joblib.load('random_forest_animal_classifier.pkl')
@@ -16,12 +17,20 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(LED_PIN, GPIO.OUT)
 GPIO.setup(BUZZER_PIN, GPIO.OUT)
 
+# Setup I2C LCD
+lcd = CharLCD('PCF8574', 0x27)  # Change '0x27' if your LCD has a different I2C address
+
 def activate_deterrents():
     GPIO.output(LED_PIN, GPIO.HIGH)
     GPIO.output(BUZZER_PIN, GPIO.HIGH)
+    lcd.clear()
+    lcd.write_string("Animal Detected!")
+    lcd.cursor_pos = (1, 0)  # Move to the second line
+    lcd.write_string("Go Slow")
     time.sleep(1)
     GPIO.output(LED_PIN, GPIO.LOW)
     GPIO.output(BUZZER_PIN, GPIO.LOW)
+    lcd.clear()
 
 # Define function to extract HOG features from an image
 def extract_hog_features(image):
@@ -48,4 +57,5 @@ try:
 except KeyboardInterrupt:
     cap.release()
     GPIO.cleanup()
+    lcd.clear()
     print("Program terminated.")
