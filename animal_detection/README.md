@@ -26,6 +26,8 @@ This repository contains two Python scripts for animal detection using computer 
   - Scikit-image
   - Joblib
   - RPi.GPIO (for Raspberry Pi GPIO control)
+ 
+1. Extract the dataset.
 
 You can install the necessary dependencies using the following:
 
