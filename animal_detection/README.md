@@ -27,7 +27,7 @@ This repository contains two Python scripts for animal detection using computer 
   - Joblib
   - RPi.GPIO (for Raspberry Pi GPIO control)
  
-1. Extract the dataset- validation.zip in dataset and `animals.zip` and `non_animals.zip` in train
+1. Extract the dataset- `validation.zip` in dataset and `animals.zip` and `non_animals.zip` in train
 
 You can install the necessary dependencies using the following:
 
