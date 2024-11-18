@@ -21,8 +21,8 @@ GPIO.setup(BUZZER_PIN, GPIO.OUT)
 lcd = CharLCD('PCF8574', 0x27)  # Change '0x27' if your LCD has a different I2C address
 
 def activate_deterrents():
-    GPIO.output(LED_PIN, GPIO.HIGH)
-    GPIO.output(BUZZER_PIN, GPIO.HIGH)
+    GPIO.output(LED_PIN, GPIO.HIGH) #flashlight pin
+    GPIO.output(BUZZER_PIN, GPIO.HIGH) #sound (inaudible to humans) producer to scare animals
     lcd.clear()
     lcd.write_string("Animal Detected!")
     lcd.cursor_pos = (1, 0)  # Move to the second line
