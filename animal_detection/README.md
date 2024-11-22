@@ -1,3 +1,5 @@
+### NOTE: The main script cannot run without rasberry pie. Use the rain_model script.
+
 # Animal Detection using Random Forest and HOG Features
 
 This repository contains two Python scripts for animal detection using computer vision techniques. One script is for training a Random Forest classifier using HOG features from images, while the other script utilizes the trained model to perform real-time animal detection via a webcam.
