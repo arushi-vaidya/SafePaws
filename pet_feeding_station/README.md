@@ -2,7 +2,7 @@
 
 This project automates an animal feeding station using a Raspberry Pi, a PIR (Passive Infrared) sensor for motion detection, and a dispenser mechanism. When the PIR sensor detects movement, the dispenser is activated for 5 seconds to release food or water for animals.
 
-Here, another file called simulator has been uploaded where you can manually enter values to see the working on system.
+### Here, another file called simulator has been uploaded where you can manually enter values to see the working on system.
 
 ## Features
 - Detects animal presence using a PIR motion sensor.
