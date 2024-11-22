@@ -1,4 +1,4 @@
-### NOTE: The main script cannot run without rasberry pie. Use the rain_model script.
+### NOTE: The main script cannot run without rasberry pie. Use the train_animal_detection_model.py script.
 
 # Animal Detection using Random Forest and HOG Features
 
